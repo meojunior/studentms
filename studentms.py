@@ -96,7 +96,7 @@ def login():
         return
     
     try:
-        with open("users.txt", "r") as file:
+        with open("users.txt") as file:
             for line in file:
                 stored_uname, stored_email, stored_pass = line.strip().split(", ")
                 if uname == stored_uname and password == stored_pass:
